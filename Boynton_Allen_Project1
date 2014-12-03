@@ -42,9 +42,15 @@ var previousButton = Ti.UI.createView({
 	borderRadius: 5,
 	height: 75 
 });
-/*
-var previousLabel = Ti.UI.createLabel({});
-*/
+
+var previousLabel = Ti.UI.createLabel({
+	text: "Previous",
+	color: "white",
+	font: {fontSize: 18, fontFamily: "Baskerville", fontWeight: "bold", fontStyle: "italic"},
+	top: 425,
+	left: 45
+});
+
 var nextButton = Ti.UI.createView({
 	backgroundColor: "00bff0",
 	borderColor: "black",
@@ -54,15 +60,18 @@ var nextButton = Ti.UI.createView({
 	borderRadius: 5,
 	height: 75
 });
-/*
-var nextLabel = Ti.UI.createLabel({});
 
-var leadFile = require("holidays");
+var nextLabel = Ti.UI.createLabel({
+	text: "Next",
+	color: "white",
+	font: {fontSize: 18, fontFamily: "Baskerville", fontWeight: "bold", fontStyle: "italic"},
+	top: 425,
+	right: 65
+});
 
+var leadFile = require("beaches");
 
-buttonView.addEventListener("click", previousButton);
-*/
 mainWindow.open();
-mainWindow.add(mainView, previousButton, nextButton);
+mainWindow.add(mainView, previousButton, previousLabel, nextButton, nextLabel);
 mainView.add(titleText);
 
