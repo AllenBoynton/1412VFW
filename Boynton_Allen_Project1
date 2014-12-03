@@ -19,24 +19,50 @@ var mainView = Ti.UI.createView({
 	borderColor: "black",
 	borderRadius: 5,
 	borderWidth: 1,
-	height: 50,
+	height: 100,
 	top: 50,
 	left: 20,
 	right: 20,
 });
+
+var titleText = Ti.UI.createLabel({
+	text: "USA Beaches",
+	color: "blue",
+	font: {fontSize: 24, fontFamily: "Baskerville", fontWeight: "bold", fontStyle: "italic"},
+	textAlign: "center",
+	top: 37
+});
+
+var previousButton = Ti.UI.createView({
+	backgroundColor: "00bff0",
+	borderColor: "black",
+	top: mainView.top + mainView.height + 250,
+	left: 20,
+	right: 175,
+	borderRadius: 5,
+	height: 75 
+});
 /*
-var titleView = Ti.UI.createLabel({});
-
-var previousButton = Ti.UI.createView({});
-
 var previousLabel = Ti.UI.createLabel({});
-
-var nextButton = Ti.UI.createView({});
-
+*/
+var nextButton = Ti.UI.createView({
+	backgroundColor: "00bff0",
+	borderColor: "black",
+	top: mainView.top + mainView.height + 250,
+	left: 175,
+	right: 20,
+	borderRadius: 5,
+	height: 75
+});
+/*
 var nextLabel = Ti.UI.createLabel({});
 
 var leadFile = require("holidays");
+
+
+buttonView.addEventListener("click", previousButton);
 */
 mainWindow.open();
-mainWindow.add(mainView);
+mainWindow.add(mainView, previousButton, nextButton);
+mainView.add(titleText);
 
