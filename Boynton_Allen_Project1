@@ -7,4 +7,36 @@
 
 Ti.UI.setBackgroundColor("#000");
 
-var mainWindow = Ti.UI.createWindow({});
+var mainWindow = Ti.UI.createWindow({
+	// Reserved Properties
+	backgroundColor: "#fff",
+	backgroundImage: "beach.png",
+	title: "My First App Window"
+});
+
+var mainView = Ti.UI.createView({
+	backgroundColor: "f6e2b7",
+	borderColor: "black",
+	borderRadius: 5,
+	borderWidth: 1,
+	height: 50,
+	top: 50,
+	left: 20,
+	right: 20,
+});
+/*
+var titleView = Ti.UI.createLabel({});
+
+var previousButton = Ti.UI.createView({});
+
+var previousLabel = Ti.UI.createLabel({});
+
+var nextButton = Ti.UI.createView({});
+
+var nextLabel = Ti.UI.createLabel({});
+
+var leadFile = require("holidays");
+*/
+mainWindow.open();
+mainWindow.add(mainView);
+
