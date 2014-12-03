@@ -1,0 +1,10 @@
+// (bootstrap file) Only contains the necessary objects to open this application.
+
+// Author: Allen Boynton
+// VFW1412
+// Project 1
+// Due: December 2, 2014
+
+Ti.UI.setBackgroundColor("#000");
+
+var mainWindow = Ti.UI.createWindow({});
