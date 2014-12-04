@@ -75,13 +75,23 @@ var beachNames = ["Miami, FL", "Myrtle Beach, SC", "Daytona Beach, FL", "Laguna 
 var leadFile = require("beaches");
 */
 var showBeachNames = function(){
-	titleText.text = beachNames;
 	titleText.hide();
 	titleText = null;
+	
+	var beachLabel = Ti.UI.createLabel({
+		text: beachNames[0],
+		color: "blue",
+		font: {fontSize: 24, fontFamily: "Baskerville", fontWeight: "bold", fontStyle: "italic"},
+		textAlign: "center",
+		top: 37
+	});
+	
+	mainView.add(beachLabel);
 	
 };
 
 previousButton.addEventListener("click", showBeachNames);
+nextButton.addEventListener("click", showBeachNames);
 
 
 mainWindow.open();
