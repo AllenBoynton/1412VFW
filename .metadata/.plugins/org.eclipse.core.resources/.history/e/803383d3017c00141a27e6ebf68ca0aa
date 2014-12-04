@@ -1,0 +1,30 @@
+// global variables
+var beachNames = ["Miami South Beach, FL", "Myrtle Beach, SC", "Daytona Beach, FL", 
+				"Laguna Beach, CA", "Venice Beach, CA", "Clearwater Beach, FL", 
+				"Long Beach, NJ"];
+
+var i = 0;
+
+var previousBeach = function(){
+	beachNames.reverse();
+	if(i<6){
+		titleText.text = beachNames[0];
+		i--;
+	} else {
+		titleText.text = beachNames[i];
+		i--;
+	}
+};
+
+var nextBeach = function(){
+	if(i<6){
+		titleText.text = beachNames[0];
+		i++;
+	} else {
+		titleText.text = beachNames[i];
+		i++;
+	}
+};
+
+previousButton.addEventListener("click", previousBeach);
+nextButton.addEventListener("click", nextBeach);

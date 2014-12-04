@@ -10,8 +10,7 @@ Ti.UI.setBackgroundColor("#000");
 var mainBackground = Ti.UI.createWindow({
 	// Reserved Properties
 	backgroundColor: "#fff",
-	backgroundImage: "beach.png",
-	title: "My First App Window"
+	backgroundImage: "beach.png"
 });
 
 var mainWindow = Ti.UI.createView({
@@ -69,32 +68,9 @@ var nextLabel = Ti.UI.createLabel({
 	right: 65
 });
 
-var beachNames = ["Miami, FL", "Myrtle Beach, SC", "Daytona Beach, FL", "Laguna Beach, CA",
-				"Venice Beach, CA", "Clearwater Beach, FL", "Long Beach, NJ" ];
-/*
 var leadFile = require("beaches");
-*/
-var showBeachNames = function(){
-	titleText.hide();
-	//titleText = null;
-	
-	var beachLabel = Ti.UI.createLabel({
-		text: beachNames[0],
-		color: "blue",
-		font: {fontSize: 24, fontFamily: "Baskerville", fontWeight: "bold", fontStyle: "italic"},
-		textAlign: "center",
-		top: 37
-	});
-	// Displays beach names in main window
-	mainWindow.add(beachLabel);
-	
-};
-// Give function to buttons
-previousButton.addEventListener("click", showBeachNames);
-nextButton.addEventListener("click", showBeachNames);
-
 
 mainBackground.open();
-mainBackground.add(mainView, previousButton, previousLabel, nextButton, nextLabel);
+mainBackground.add(mainWindow, previousButton, previousLabel, nextButton, nextLabel);
 mainWindow.add(titleText);
 
