@@ -7,14 +7,14 @@
 
 Ti.UI.setBackgroundColor("#000");
 
-var mainBackground = Ti.UI.createWindow({
+var mainWindow = Ti.UI.createWindow({
 	// Reserved Properties
 	backgroundColor: "#fff",
 	backgroundImage: "beach.png",
 	title: "My First App Window"
 });
 
-var mainWindow = Ti.UI.createView({
+var mainView = Ti.UI.createView({
 	backgroundColor: "f6e2b7",
 	borderColor: "black",
 	borderRadius: 5,
@@ -36,7 +36,7 @@ var titleText = Ti.UI.createLabel({
 var previousButton = Ti.UI.createView({
 	backgroundColor: "00bff0",
 	borderColor: "black",
-	top: mainWindow.top + mainWindow.height + 250,
+	top: mainView.top + mainView.height + 250,
 	left: 20,
 	right: 175,
 	borderRadius: 5,
@@ -54,7 +54,7 @@ var previousLabel = Ti.UI.createLabel({
 var nextButton = Ti.UI.createView({
 	backgroundColor: "00bff0",
 	borderColor: "black",
-	top: mainWindow.top + mainWindow.height + 250,
+	top: mainView.top + mainView.height + 250,
 	left: 175,
 	right: 20,
 	borderRadius: 5,
@@ -85,16 +85,15 @@ var showBeachNames = function(){
 		textAlign: "center",
 		top: 37
 	});
-	// Displays beach names in main window
-	mainWindow.add(beachLabel);
+	mainView.add(beachLabel);
 	
 };
-// Give function to buttons
+
 previousButton.addEventListener("click", showBeachNames);
 nextButton.addEventListener("click", showBeachNames);
 
 
-mainBackground.open();
-mainBackground.add(mainView, previousButton, previousLabel, nextButton, nextLabel);
-mainWindow.add(titleText);
+mainWindow.open();
+mainWindow.add(mainView, previousButton, previousLabel, nextButton, nextLabel);
+mainView.add(titleText);
 
