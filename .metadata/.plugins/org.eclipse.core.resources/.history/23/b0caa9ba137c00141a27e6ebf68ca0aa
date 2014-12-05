@@ -7,14 +7,12 @@
 
 Ti.UI.setBackgroundColor("#000");
 
-// Main background
 var mainBackground = Ti.UI.createWindow({
 	// Reserved Properties
 	backgroundColor: "#fff",
 	backgroundImage: "beach.png"
 });
 
-// Main text window with size and color
 var mainWindow = Ti.UI.createView({
 	backgroundColor: "f6e2b7",
 	borderColor: "black",
@@ -26,7 +24,6 @@ var mainWindow = Ti.UI.createView({
 	right: 20,
 });
 
-// Text with font set
 var titleText = Ti.UI.createLabel({
 	text: "USA Beaches",
 	color: "blue",
@@ -35,7 +32,6 @@ var titleText = Ti.UI.createLabel({
 	top: 37
 });
 
-// Button to reverse through array
 var previousButton = Ti.UI.createView({
 	backgroundColor: "00bff0",
 	borderColor: "black",
@@ -46,7 +42,6 @@ var previousButton = Ti.UI.createView({
 	height: 75 
 });
 
-// Text for button
 var previousLabel = Ti.UI.createLabel({
 	text: "Previous",
 	color: "white",
@@ -55,7 +50,6 @@ var previousLabel = Ti.UI.createLabel({
 	left: 45
 });
 
-// Button to move forward through array
 var nextButton = Ti.UI.createView({
 	backgroundColor: "00bff0",
 	borderColor: "black",
@@ -66,7 +60,6 @@ var nextButton = Ti.UI.createView({
 	height: 75
 });
 
-// Text for button
 var nextLabel = Ti.UI.createLabel({
 	text: "Next",
 	color: "white",
@@ -75,10 +68,8 @@ var nextLabel = Ti.UI.createLabel({
 	right: 65
 });
 
-// Calls secondary js file holding all specific info
 var leadFile = require("beaches");
 
-// Main calls
 mainBackground.open();
 mainBackground.add(mainWindow, previousButton, previousLabel, nextButton, nextLabel);
 mainWindow.add(titleText);
