@@ -112,3 +112,17 @@ java.lang.NumberFormatException: null
 	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2014-12-06 17:14:35.382
+!MESSAGE An internal error occurred during: "Periodic workspace save.".
+!STACK 0
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:417)
+	at java.lang.Integer.<init>(Integer.java:660)
+	at org.eclipse.core.internal.resources.SaveManager.validateMasterTableBeforeSave(SaveManager.java:1560)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1228)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1220)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1197)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)

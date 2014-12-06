@@ -5,4 +5,8 @@
 // Project 2
 // Due: December 6, 2014
 
- 
+// Background picture, sliced in PS and degraded file size
+var mainBackground = Ti.UI.createWindow({
+	// Reserved properties
+	backgroundImage: "Cruiseship.png"
+});
