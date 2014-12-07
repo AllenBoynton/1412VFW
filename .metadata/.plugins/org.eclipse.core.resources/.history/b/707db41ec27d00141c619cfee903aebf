@@ -41,23 +41,15 @@ var shipTable = Ti.UI.createTableView({
 // Cruise ships
 var shipSection = Ti.UI.createTableViewSection({
 	headerTitle: "Cruise Ships",
-	footerTitle: "Ship Features"
+	footerTitle: "Ship Description"
 });
 
 // Grand ships
 var grandShipSection = Ti.UI.createTableViewSection({
 	headerTitle: "Grand Ships",
-	footerTitle: "Ship Features"
+	footerTitle: "Ship Description"
 });
 
-// Create array to add to the cruise ship table
-var shipSections = [cruiseShipSection, grandShipSection];
-
-// Add sections to the table
-shipTable.setData(shipSections);
-
-// loadFile variable to load secondary file
-var loadFile = require("json");
 
 // Main code
 mainBackground.add(titleBar, borderLine, shipTable);
