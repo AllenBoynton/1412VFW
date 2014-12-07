@@ -5,17 +5,18 @@
 // Project 2
 // Due: December 6, 2014
 
-Ti.UI.setBackgroundColor("transparent");
+Ti.UI.setBackgroundColor("gray");
 
 // Main background
 var mainBackground = Ti.UI.createWindow({
-	backgroundColor: "gray",
+	backgroundImage: "cruise1.png",
+	top: 20
 });
 
 // Title bar
 var titleBar = Ti.UI.createView({
 	backgroundColor: "#00ffff",
-	top: 20,
+	top: 0,
 	height: 50
 });
 
@@ -23,7 +24,7 @@ var titleBar = Ti.UI.createView({
 var titleText = Ti.UI.createLabel({
 	text: "Cruise Ships",
 	textAlign: "center",
-	font: {fontFamily: "Didot", fontWeight: "bold", fontSize: 20}
+	font: {fontFamily: "Didot", fontWeight: "bold", fontSize: 26}
 });
 
 // Border line
@@ -34,9 +35,9 @@ var borderLine = Ti.UI.createView({
 });
 
 // Table view
-var shipTable = Ti.UI.createTableView({
+var shipsTable = Ti.UI.createTableView({
 	top: borderLine.top + borderLine.height,
-	color: "gray"
+	bottom: 152
 });
 
 // Cruise ships
@@ -52,10 +53,10 @@ var grandSection = Ti.UI.createTableViewSection({
 });
 
 // Create array to add to the cruise ship table
-var shipSections = [cruiseSection, grandSection];
+var shipsSections = [cruiseSection, grandSection];
 
 // Add sections to the table
-shipTable.setData(shipSections);
+shipsTable.setData(shipsSections);
 
 // os test for runability
 if(Ti.Platform.name === "i Phone OS"){
@@ -66,7 +67,6 @@ if(Ti.Platform.name === "i Phone OS"){
 var loadFile = require("json");
 
 // Main code
-mainBackground.add(titleBar, borderLine, shipTable);
-//shipTable.add(getRow);
+mainBackground.add(titleBar, borderLine, shipsTable);
 titleBar.add(titleText);
 mainBackground.open();

@@ -51,10 +51,9 @@ var getName = function(){
 	var nameTitleText = Ti.UI.createLabel({
 		text: this.name,
 		textAlign: "center",
-		font: {fontFamily: "Didot", fontWeight: "bold", fontSize: 20}
+		font: {fontFamily: "Didot", fontWeight: "bold", fontSize: 26}
 	});
 	
-
 	// New border
 	var nameBorder = Ti.UI.createView({
 		backgroundColor: "blue",
@@ -77,12 +76,20 @@ var getName = function(){
 		text: "Return",
 		backgroundColor: "gray",
 		height: 50,
-		font: {fontSize: 18, fontFamily: "Didot", fontWeight: "bold"},
+		font: {fontSize: 22, fontFamily: "Didot", fontWeight: "bold"},
 		width: "100%",
 		bottom: 0,
 		textAlign: "center"
 	});
 	
+	// New border
+	var returnBorder = Ti.UI.createView({
+		backgroundColor: "blue",
+		bottom: 50,
+		width: "100%",
+		height: 2
+	});
+
 	// Remove newWindow
 	var removeWindow = function(){
 		nameWindow.close();
@@ -91,29 +98,29 @@ var getName = function(){
 	// Main secondary code
 	returnButton.addEventListener("click", removeWindow);
 	
-	nameWindow.add(nameTitleBar, nameBorder, featureText, returnButton);
+	nameWindow.add(nameTitleBar, nameBorder, featureText, returnButton, returnBorder);
 	nameTitleBar.add(nameTitleText);
 	nameWindow.open();
 };
 
 // Loop through cruiseShipList objects
 for (var i=0; i<ships.cruise.shipList.length; i++){
-	var getRow = Ti.UI.createTableViewRow({
+	var newRow = Ti.UI.createTableViewRow({
 		name: ships.cruise.shipList[i].name,
 		feat: ships.cruise.shipList[i].features,
 		hasChild: true
 	});
-	getRow.addEventListener("click", getName);
-	cruiseSection.add(getRow);
+	cruiseSection.add(newRow);
+	newRow.addEventListener("click", getName);
 };
 
 // Loop through grandShipList objects
 for (var i=0; i<ships.grand.shipList.length; i++){
-	var getRow = Ti.UI.createTableViewRow({
+	var newRow = Ti.UI.createTableViewRow({
 		name: ships.grand.shipList[i].name,
 		feat: ships.grand.shipList[i].features,
 		hasChild: true
 	});
-	getRow.addEventListener("click", getName);
-	grandSection.add(getRow);
+	grandSection.add(newRow);
+	newRow.addEventListener("click", getName);
 };
