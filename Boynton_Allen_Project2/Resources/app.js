@@ -9,8 +9,7 @@ Ti.UI.setBackgroundColor("#000");
 
 // Main background
 var mainBackground = Ti.UI.createWindow({
-	backgroundColor: "#fff"
-	//backgroundImage: "Cruiseship.jpg"
+	backgroundImage: "cruise_ship.png"
 });
 
 // Title bar
@@ -24,5 +23,23 @@ var titleBar = Ti.UI.createWindow({
 var titleText = Ti.UI.createWindow({
 	text: "Cruise Ships",
 	textAlign: "center",
-	font; {fontWeight: "bold", fontSize: 18}
+	font: {fontWeight: "bold", fontSize: 18}
 });
+
+// Border line
+var borderLine = Ti.UI.createWindow({
+	backgroundColor: "#black",
+	top: titleBar.top + titleBar.height,
+	height: 2
+});
+
+// Table view
+var shipTable = Ti.UI.createWindow({
+	top: borderLine.top + borderLine.height,
+});
+
+
+// Main code
+mainBackground.add(titleBar, borderLine, shipTable);
+titleBar.add(titleText);
+mainBackground.open();
