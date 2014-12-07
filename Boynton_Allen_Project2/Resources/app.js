@@ -5,8 +5,17 @@
 // Project 2
 // Due: December 6, 2014
 
+Ti.UI.setBackgroundColor("#000");
+
 // Background picture, sliced in PS and degraded file size
 var mainBackground = Ti.UI.createWindow({
 	// Reserved properties
-	backgroundImage: "Cruiseship.png"
+	backgroundColor: "#f5f5f5"
+});
+
+// Title bar
+var titleWindow = Ti.UI.createWindow({
+	backgroundColor: "#fff",
+	top: 20,
+	height: 50
 });
