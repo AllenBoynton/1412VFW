@@ -5,7 +5,7 @@
 // Project 2
 // Due: December 6, 2014
 
-Ti.UI.setBackgroundColor("d3d3d3");
+Ti.UI.setBackgroundColor("gray");
 
 // Main background
 var mainBackground = Ti.UI.createWindow({
@@ -52,6 +52,6 @@ var grandShipSection = Ti.UI.createTableViewSection({
 
 
 // Main code
+mainBackground.open();
 mainBackground.add(titleBar, borderLine, shipTable);
 titleBar.add(titleText);
-mainBackground.open();

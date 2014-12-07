@@ -5,16 +5,17 @@
 // Project 2
 // Due: December 6, 2014
 
-Ti.UI.setBackgroundColor("d3d3d3");
+Ti.UI.setBackgroundColor("transparent");
 
 // Main background
 var mainBackground = Ti.UI.createWindow({
 	backgroundColor: "transparent",
+	backgroundImage: "cruise_ship.png"
 });
 
 // Title bar
 var titleBar = Ti.UI.createView({
-	backgroundColor: "blue",
+	backgroundColor: "transparent",
 	top: 20,
 	height: 50
 });
@@ -30,6 +31,7 @@ var titleText = Ti.UI.createLabel({
 var borderLine = Ti.UI.createView({
 	backgroundColor: "blue",
 	top: titleBar.top + titleBar.height,
+	
 	height: 2
 });
 
@@ -52,6 +54,6 @@ var grandShipSection = Ti.UI.createTableViewSection({
 
 
 // Main code
+mainBackground.open();
 mainBackground.add(titleBar, borderLine, shipTable);
 titleBar.add(titleText);
-mainBackground.open();

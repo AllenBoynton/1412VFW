@@ -52,6 +52,6 @@ var grandShipSection = Ti.UI.createTableViewSection({
 
 
 // Main code
+mainBackground.open();
 mainBackground.add(titleBar, borderLine, shipTable);
 titleBar.add(titleText);
-mainBackground.open();
