@@ -9,12 +9,12 @@ Ti.UI.setBackgroundColor("d3d3d3");
 
 // Main background
 var mainBackground = Ti.UI.createWindow({
-	backgroundColor: "#fff",
+	backgroundColor: "transparent",
 });
 
 // Title bar
 var titleBar = Ti.UI.createView({
-	backgroundColor: "#00ffff",
+	backgroundColor: "blue",
 	top: 20,
 	height: 50
 });
@@ -22,9 +22,8 @@ var titleBar = Ti.UI.createView({
 // Title bar text
 var titleText = Ti.UI.createLabel({
 	text: "Cruise Ships",
-	width: "100%",
 	textAlign: "center",
-	font: {fontFamily: "Didot", fontWeight: "bold", fontSize: 20}
+	font: {color: "blue", fontWeight: "bold", fontSize: 18}
 });
 
 // Border line
@@ -39,21 +38,16 @@ var shipTable = Ti.UI.createTableView({
 	top: borderLine.top + borderLine.height,
 });
 
-// os test for runability
-if(Ti.Platform.name === "i Phone OS"){
-	shipTable.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
-}
-
 // Cruise ships
-var cruiseShipSection = Ti.UI.createTableViewSection({
+var shipSection = Ti.UI.createTableViewSection({
 	headerTitle: "Cruise Ships",
-	footerTitle: "Cruise Ship Features"
+	footerTitle: "Ship Features"
 });
 
 // Grand ships
 var grandShipSection = Ti.UI.createTableViewSection({
 	headerTitle: "Grand Ships",
-	footerTitle: "Grand Ship Features"
+	footerTitle: "Ship Features"
 });
 
 // Create array to add to the cruise ship table

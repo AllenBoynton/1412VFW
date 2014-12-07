@@ -51,9 +51,7 @@ var seeName = function(){
 	var nameTitleText = Ti.UI.createLabel({
 		text: "Ship Features",
 		textAlign: "center",
-		font: {fontFamily: "Didot", fontWeight: "bold", fontSize: 20},
-		top: 20,
-		height: 50
+		font: {fontFamily: "Didot", fontWeight: "bold", fontSize: 20}
 	});
 	
 	// New border
@@ -76,8 +74,8 @@ var seeName = function(){
 	// Return button to main menu
 	var returnButton = Ti.UI.createLabel({
 		text: "Return",
-		backgroundColor: "blue",
-		font: {fontSize: 18, fontFamily: "Didot", fontWeight: "bold"},
+		backgroundColor: "red",
+		font: {fontSize: 18, fontFamily: "Didot", fontStyle: "bold"},
 		textAlign: "center",
 		bottom: 0,
 		height: 50,

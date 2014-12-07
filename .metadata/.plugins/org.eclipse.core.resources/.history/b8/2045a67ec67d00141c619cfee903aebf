@@ -37,23 +37,21 @@ var ships = {
 // Function creating a new window
 var seeName = function(){
 	var nameWindow = Ti.UI.createWindow({
-		backgroundColor: "d3d3d3"
+		backgroundColor: "blue"
 	});
 	
 	// New title bar
 	var nameTitleBar = Ti.UI.createView({
-		backgroundColor: "#00ffff",
+		backgroundColor: "gray",
 		top: 20,
 		height: 50
 	});
 	
 	// New title bar text
 	var nameTitleText = Ti.UI.createLabel({
-		text: "Ship Features",
+		text: this.title,
 		textAlign: "center",
-		font: {fontFamily: "Didot", fontWeight: "bold", fontSize: 20},
-		top: 20,
-		height: 50
+		font: {fontWeight: "bold", fontSize: 18}
 	});
 	
 	// New border
@@ -76,13 +74,13 @@ var seeName = function(){
 	// Return button to main menu
 	var returnButton = Ti.UI.createLabel({
 		text: "Return",
-		backgroundColor: "blue",
-		font: {fontSize: 18, fontFamily: "Didot", fontWeight: "bold"},
+		backgroundColor: "#333",
+		color: "#fff",
+		font: {fontSize: 18, fontFamily: "Didot", fontStyle: "bold"},
 		textAlign: "center",
-		bottom: 0,
-		height: 50,
-		width: "100%"
-		
+		left: 20,
+		top: 20,
+		height: 50
 	});
 	
 	// Remove newWindow
@@ -102,7 +100,7 @@ var seeName = function(){
 for (var i=0; i<ships.cruiseShips.cruiseShipList.length; i++){
 	var newRow = Ti.UI.createTableViewRow({
 		name: ships.cruiseShips.cruiseShipList[i].name,
-		features: ships.cruiseShips.cruiseShipList[i].features,
+		feat: ships.cruiseShips.cruiseShipList[i].features,
 		hasChild: true
 	});
 	cruiseShipSection.add(newRow);
@@ -113,7 +111,7 @@ for (var i=0; i<ships.cruiseShips.cruiseShipList.length; i++){
 for (var i=0; i<ships.grandShips.cruiseShipList.length; i++){
 	var newRow = Ti.UI.createTableViewRow({
 		name: ships.grandShips.cruiseShipList[i].name,
-		features: ships.grandShips.cruiseShipList[i].features,
+		feat: ships.grandShips.cruiseShipList[i].features,
 		hasChild: true
 	});
 	grandShipSection.add(newRow);

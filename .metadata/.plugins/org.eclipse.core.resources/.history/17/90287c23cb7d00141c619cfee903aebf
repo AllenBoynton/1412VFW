@@ -51,9 +51,7 @@ var seeName = function(){
 	var nameTitleText = Ti.UI.createLabel({
 		text: "Ship Features",
 		textAlign: "center",
-		font: {fontFamily: "Didot", fontWeight: "bold", fontSize: 20},
-		top: 20,
-		height: 50
+		font: {fontFamily: "Didot", fontWeight: "bold", fontSize: 20}
 	});
 	
 	// New border
