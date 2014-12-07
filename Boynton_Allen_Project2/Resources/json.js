@@ -1,7 +1,7 @@
 // JSON data
 var ships = {
-	"cruiseShips":{
-		"cruiseShipList": [
+	"cruise":{
+		"shipList": [
 			{
 				"name"    : "Freedom",
 				"features": "Enjoy all the revolutionary features that the Freedom has always been known for – a surf simulator, rock climbing wall, ice-skating rink, royal promenade, cantilevered whirlpools, mini golf course, water park, and much more."
@@ -13,17 +13,17 @@ var ships = {
 			{
 				"name"    : "Independence",
 				"features": "Meet Independence, a marvel of maritime engineering, packed with all the phenomenal onboard experiences you'd expect from this class of ships—including the surf simulator, a rock climbing wall, ice-skating rink, cantilevered whirlpools, royal promenade, mini golf course, and much more."
-			}
-		
+			}		
 		]
 	},
-	"grandShips":{
-		"cruiseShipList": [
+	"grand":{
+		"shipList": [
 			{
 				"name"    : "Quantum",
 				"features": "The first of all the Grand ships is our flagship, the Quantum! Packed with first-at-sea experiences: the oceanside aqua theater, Premier Coffee Shop, Broadway musical hits, 3D movie theater, zip line, designer shopping stores, and much more."
 			},
-			{	"name"    : "Anthem",
+			{	
+				"name"    : "Anthem",
 				"features": "There's only one word that can possibly sum up the second ship in our Grand class, the Anthem: WOW! Newly designed staterooms, game-changing technology, groundbreaking venues and the best dining ever are just the start of what you'll find onboard."
 			},
 			{
@@ -35,9 +35,9 @@ var ships = {
 };
 
 // Function creating a new window
-var seeName = function(){
+var getName = function(){
 	var nameWindow = Ti.UI.createWindow({
-		backgroundColor: "d3d3d3"
+		backgroundColor: "#f5f5f5"
 	});
 	
 	// New title bar
@@ -49,16 +49,15 @@ var seeName = function(){
 	
 	// New title bar text
 	var nameTitleText = Ti.UI.createLabel({
-		text: "Ship Features",
+		text: this.name,
 		textAlign: "center",
-		font: {fontFamily: "Didot", fontWeight: "bold", fontSize: 20},
-		top: 20,
-		height: 50
+		font: {fontFamily: "Didot", fontWeight: "bold", fontSize: 20}
 	});
 	
+
 	// New border
-	var nameBorderLine = Ti.UI.createView({
-		backgroundColor: "black",
+	var nameBorder = Ti.UI.createView({
+		backgroundColor: "blue",
 		top: nameTitleBar.top + nameTitleBar.height,
 		height: 2
 	});
@@ -67,22 +66,21 @@ var seeName = function(){
 	var featureText = Ti.UI.createLabel({
 		text: this.feat,
 		color: "blue",
-		font: {fontSize: 14, fontFamily: "Didot"},
-		top: nameBorderLine.height + nameBorderLine.top + 50,
-		left: 10,
-		right: 10
+		font: {fontSize: 16, fontFamily: "Didot", fontStyle: "italic"},
+		top: 100,
+		left:  20,
+		right: 20
 	});
 	
 	// Return button to main menu
 	var returnButton = Ti.UI.createLabel({
 		text: "Return",
-		backgroundColor: "blue",
-		font: {fontSize: 18, fontFamily: "Didot", fontWeight: "bold"},
-		textAlign: "center",
-		bottom: 0,
+		backgroundColor: "gray",
 		height: 50,
-		width: "100%"
-		
+		font: {fontSize: 18, fontFamily: "Didot", fontWeight: "bold"},
+		width: "100%",
+		bottom: 0,
+		textAlign: "center"
 	});
 	
 	// Remove newWindow
@@ -93,29 +91,29 @@ var seeName = function(){
 	// Main secondary code
 	returnButton.addEventListener("click", removeWindow);
 	
+	nameWindow.add(nameTitleBar, nameBorder, featureText, returnButton);
 	nameTitleBar.add(nameTitleText);
-	nameWindow.add(nameTitleBar, nameBorderLine, nameTitleText, returnButton);
 	nameWindow.open();
 };
 
 // Loop through cruiseShipList objects
-for (var i=0; i<ships.cruiseShips.cruiseShipList.length; i++){
-	var newRow = Ti.UI.createTableViewRow({
-		name: ships.cruiseShips.cruiseShipList[i].name,
-		features: ships.cruiseShips.cruiseShipList[i].features,
+for (var i=0; i<ships.cruise.shipList.length; i++){
+	var getRow = Ti.UI.createTableViewRow({
+		name: ships.cruise.shipList[i].name,
+		feat: ships.cruise.shipList[i].features,
 		hasChild: true
 	});
-	cruiseShipSection.add(newRow);
-	newRow.addEventListener("click", seeName);
+	getRow.addEventListener("click", getName);
+	cruiseSection.add(getRow);
 };
 
 // Loop through grandShipList objects
-for (var i=0; i<ships.grandShips.cruiseShipList.length; i++){
-	var newRow = Ti.UI.createTableViewRow({
-		name: ships.grandShips.cruiseShipList[i].name,
-		features: ships.grandShips.cruiseShipList[i].features,
+for (var i=0; i<ships.grand.shipList.length; i++){
+	var getRow = Ti.UI.createTableViewRow({
+		name: ships.grand.shipList[i].name,
+		feat: ships.grand.shipList[i].features,
 		hasChild: true
 	});
-	grandShipSection.add(newRow);
-	newRow.addEventListener("click", seeName);
+	getRow.addEventListener("click", getName);
+	grandSection.add(getRow);
 };
