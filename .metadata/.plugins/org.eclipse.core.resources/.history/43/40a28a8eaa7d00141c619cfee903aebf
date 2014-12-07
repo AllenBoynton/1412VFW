@@ -19,10 +19,3 @@ var titleBar = Ti.UI.createWindow({
 	top: 20,
 	height: 50
 });
-
-// Title bar text
-var titleText = Ti.UI.createWindow({
-	text: "Cruise Ships",
-	textAlign: "center",
-	font; {fontWeight: "bold", fontSize: 18}
-});
