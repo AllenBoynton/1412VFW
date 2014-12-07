@@ -13,3 +13,9 @@ var mainBackground = Ti.UI.createWindow({
 	//backgroundImage: "Cruiseship.jpg"
 });
 
+// Title bar
+var titleBar = Ti.UI.createWindow({
+	backgroundColor: "#fff",
+	top: 20,
+	height: 50
+});
