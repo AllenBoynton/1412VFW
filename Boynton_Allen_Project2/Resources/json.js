@@ -92,7 +92,7 @@ var getName = function(){
 
 	// Remove newWindow
 	var removeWindow = function(){
-		nameWindow.close();
+		nameWindow.close({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
 	};
 	
 	// Main secondary code
@@ -100,7 +100,8 @@ var getName = function(){
 	
 	nameWindow.add(nameTitleBar, nameBorder, featureText, returnButton, returnBorder);
 	nameTitleBar.add(nameTitleText);
-	nameWindow.open();
+	
+	nameWindow.open({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
 };
 
 // Loop through cruiseShipList objects
