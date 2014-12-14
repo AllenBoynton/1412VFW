@@ -8,22 +8,25 @@ Ti.UI.setBackgroundColor("#000");
 
 //Background
 var mainWindow = Ti.UI.createWindow({
-	backgroundColor: "#333333",
+	backgroundImage: "water.jpg"
 });
 
 //Main menu button
 var menuButton = Ti.UI.createView({
-	backgroundColor: "gray",
-	height: 100,
-	width: "100%",
-	borderColor: "black"
+	backgroundColor: "white",
+	top: 200,
+	height: 75,
+	width: 275,
+	borderColor: "blue",
+	borderWidth: 2,
+	borderRadius: 8
 });
 
 //Main menu text
 var menuText = Ti.UI.createLabel({
 	text: "Open Underwater Dog Gallery",
-	color: "white",
-	font: {fontFamily: "Chalkduster", fontSize: 16, fontWeight: "bold"},
+	color: "blue",
+	font: {fontFamily: "Chalkduster", fontSize: 14, fontWeight: "bold"},
 	textAlign: "center"
 });
 

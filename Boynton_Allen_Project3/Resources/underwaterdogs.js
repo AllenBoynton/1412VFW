@@ -6,34 +6,31 @@ var pWidth = Ti.Platform.displayCaps.platformWidth,
 	margin = 5,
 	canvasWidth = pWidth - margin * (rowCount + 1),
 	size = canvasWidth / rowCount,
-	imagesFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images2"),
+	imagesFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images3"),
 	imageFiles = imagesFolder.getDirectoryListing()
 ;
 
 // Function for new gallery window
 var getGallery = function(){
 	var makeWindow = Ti.UI.createWindow({
-		backgroundColor: "gray"
+		backgroundImage: "water.jpg"
 	});
 	
 	// Gallery bar
 	var titleBar = Ti.UI.createView({
-		backgroundColor: "#333333",
-		top: 20,
-		height: 50
-	});
+		backgroundColor: "white",
+		top: 15,
+		height: 50,
+		width: 275,
+		borderColor: "blue",
+		borderWidth: 2,
+		borderRadius: 8
+		});
 	
-	// Border
-	var border = Ti.UI.createView({
-		backgroundColor: "#000",
-		top: titleBar.top + titleBar.height,
-		height: 2
-	});
-
 	//Gallery bar text
 	var titleText = Ti.UI.createLabel({
 		text: "Underwater Doggies",
-		color: "white",
+		color: "blue",
 		textAlign: "center",
 		font: {fontFamily: "Chalkduster", fontSize: 18, fontWeight: "bold"}
 	});
@@ -41,30 +38,26 @@ var getGallery = function(){
 	// Exit button
 	var exitButton = Ti.UI.createLabel({
 		text: "Close Gallery",
-		backgroundColor: "gray",
-		color: "white",
+		backgroundColor: "white",
+		color: "blue",
 		height: 50,
+		bottom: 5,
 		font: {fontFamily: "Chalkduster", fontSize: 16},
-		width: "100%",
-		bottom: 0,
-		textAlign: "center"
+		textAlign: "center",
+		width: 225,
+		borderColor: "blue",
+		borderWidth: 2,
+		borderRadius: 8
 	});
 	
-	// Border
-	var border1 = Ti.UI.createView({
-		backgroundColor: "#000",
-		bottom: 50,
-		height: 2
-	});
-
 	// Container for images
 	var container = Ti.UI.createScrollView({
-		top: titleBar.top + titleBar.height + border.height, 
+		top: titleBar.top + titleBar.height + 2, 
 		width: pWidth,
 		contentWidth: pWidth,
 		height: pHeight - titleBar.top - titleBar.height - exitButton.height,
 		showVerticalScrollIndicator: true,
-		backgroundColor: "gray",
+		backgroundColor: "transparent",
 		layout: "horizontal"
 	});
 
@@ -76,11 +69,13 @@ var getGallery = function(){
 			left: margin,
 			width: size,
 			height: size,
+			borderColor: "white",
+			borderWidth: 2,
 			borderRadius: 5
 		});
 		
 		var newImage = Ti.UI.createImageView({
-			image: "images2/" + imageFiles[i],
+			image: "images3/" + imageFiles[i],
 			top: 0,
 			width: thumbnail.width * 2,
 			borderRadius: 5
@@ -103,7 +98,7 @@ var getGallery = function(){
 		exitButton.addEventListener("click", exitWindow);
 		
 		titleBar.add(titleText);
-		makeWindow.add(titleBar, border, border1, container, exitButton);
+		makeWindow.add(titleBar, container, exitButton);
 		makeWindow.open();
 	};
 };
@@ -111,63 +106,60 @@ var getGallery = function(){
 // Function to open gallery window
 var getPicture = function(dataSource){
 	var picWindow = Ti.UI.createWindow({
-		backgroundColor: "#595959"
+		backgroundImage: "water.jpg"
 	});
 	
 	// Title bar
 	var titleBar = Ti.UI.createView({
-		backgroundColor: "#333333",
+		backgroundColor: "white",
 		top: 20,
-		height: 50
+		height: 50,
+		width: 275,
+		borderColor: "blue",
+		borderWidth: 2,
+		borderRadius: 8
 	});
 	
 	// Title bar text
 	var titleText = Ti.UI.createLabel({
 		text: "Pictures",
-		color: "#fff",
+		color: "blue",
 		textAlign: "center",
-		font: {fontFamily: "Chalkduster", fontSize: 18, fontWeight: "bold"}
+		font: {fontFamily: "Chalkduster", fontSize: 20, fontWeight: "bold"}
 	});
 	
-	// Border
-	var border2 = Ti.UI.createView({
-		backgroundColor: "#000",
-		top: titleBar.top + titleBar.height,
-		height: 2,
-	});
-
 	// Photo view
 	var newImage = Ti.UI.createImageView({
 		image: dataSource,
-		top: 150,
+		top: 125,
 		left:10,
 		right: 10,
-		borderRadius: 5
+		borderColor: "white",
+		borderRadius: 5,
+		borderWidth: 2
 	});
 	
 	var picLabel = Ti.UI.createLabel({
 		text: dataSource,
 		bottom: 150,
+		color: "white",
+		font: {fontWeight: "bold", fontSize: "18"},
 		textAlign: "center",
 	});
 			
-	// Border
-	var border3 = Ti.UI.createView({
-		backgroundColor: "#000",
-		bottom: 50,
-		height: 2,
-	});
-
 	// Close button
 	var closeButton = Ti.UI.createLabel({
 		text: "Return to Gallery",
-		backgroundColor: "gray",
-		color: "white",
-		height: 50,
+		backgroundColor: "white",
+		color: "blue",
 		font: {fontFamily: "Chalkduster", fontSize: 16},
-		width: "100%",
-		bottom: 0,
-		textAlign: "center"
+		textAlign: "center",
+		height: 50,
+		bottom: 10,
+		width: 225,
+		borderColor: "blue",
+		borderWidth: 2,
+		borderRadius: 8
 	});
 
 	// Close window
@@ -179,7 +171,7 @@ var getPicture = function(dataSource){
 	closeButton.addEventListener("click", closeWindow);	
 	
 	titleBar.add(titleText);
-	picWindow.add(titleBar, border2, border3, closeButton, picLabel, newImage);
+	picWindow.add(titleBar, closeButton, picLabel, newImage);
 	picWindow.open();
 	
 };
