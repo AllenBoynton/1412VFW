@@ -42,7 +42,7 @@ var getNewGallery = function(){
 	
 	// Exit button
 	var returnButton = Ti.UI.createLabel({
-		text: "Close Gallery",
+		text: "Return to Gallery",
 		backgroundColor: "gray",
 		color: "white",
 		height: 50,
@@ -147,7 +147,7 @@ var getPhoto = function(dataSource){
 	
 	// Close button
 	var exitButton = Ti.UI.createLabel({
-		text: "Return To Gallery",
+		text: "Close Window",
 		backgroundColor: "gray",
 		color: "#000",
 		height: 50,
