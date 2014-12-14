@@ -172,7 +172,7 @@ var getPicture = function(dataSource){
 	
 	titleBar.add(titleText);
 	picWindow.add(titleBar, picLabel, newImage, closeButton);
-	picWindow.open();
+	picWindow.open({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
 	
 };
 

@@ -35,6 +35,17 @@ var getGallery = function(){
 		font: {fontFamily: "Chalkduster", fontSize: 18, fontWeight: "bold"}
 	});
 	
+	// Container for images
+	var container = Ti.UI.createScrollView({
+		top: titleBar.top + titleBar.height + 2, 
+		width: pWidth,
+		contentWidth: pWidth,
+		height: pHeight - titleBar.top - titleBar.height - exitButton.height,
+		showVerticalScrollIndicator: true,
+		backgroundColor: "transparent",
+		layout: "horizontal"
+	});
+
 	// Exit button
 	var exitButton = Ti.UI.createLabel({
 		text: "Close Gallery",
@@ -50,17 +61,6 @@ var getGallery = function(){
 		borderRadius: 8
 	});
 	
-	// Container for images
-	var container = Ti.UI.createScrollView({
-		top: titleBar.top + titleBar.height + 2, 
-		width: pWidth,
-		contentWidth: pWidth,
-		height: pHeight - titleBar.top - titleBar.height - exitButton.height,
-		showVerticalScrollIndicator: true,
-		backgroundColor: "transparent",
-		layout: "horizontal"
-	});
-
 	// For loop to cycle through images in master image file
 	for(var i=0; i<imageFiles.length; i++){
 		var thumbnail = Ti.UI.createView({
@@ -172,7 +172,7 @@ var getPicture = function(dataSource){
 	
 	titleBar.add(titleText);
 	picWindow.add(titleBar, picLabel, newImage, closeButton);
-	picWindow.open();
+	picWindow.open({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
 	
 };
 

@@ -30,11 +30,6 @@ var menuText = Ti.UI.createLabel({
 	textAlign: "center"
 });
 
-// os test for runability
-if(Ti.Platform.name === "i Phone OS"){
-	shipTable.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
-};
-
 //variable loadFile to access secodary js file
 var loadFile = require("underwaterdogs");
 

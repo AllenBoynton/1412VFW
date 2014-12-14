@@ -91,7 +91,7 @@ var getGallery = function(){
 		
 		// Exit window
 		var exitWindow = function(){
-			makeWindow.close({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
+			makeWindow.close();
 		};
 		
 		// Main code to return
@@ -99,7 +99,7 @@ var getGallery = function(){
 		
 		titleBar.add(titleText);
 		makeWindow.add(titleBar, container, exitButton);
-		makeWindow.open({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
+		makeWindow.open();
 	};
 };
 
@@ -162,16 +162,16 @@ var getPicture = function(dataSource){
 		borderRadius: 8
 	});
 
-	// Return window
-	var returnWindow = function(){
-		picWindow.close({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
+	// Close window
+	var closeWindow = function(){
+		picWindow.close();
 	};
 	
-	// Main code to return
-	closeButton.addEventListener("click", returnWindow);
+	// Main code for photos
+	closeButton.addEventListener("click", closeWindow);	
 	
 	titleBar.add(titleText);
-	picWindow.add(titleBar, picLabel, newImage, closeButton);
+	picWindow.add(titleBar, closeButton, picLabel, newImage);
 	picWindow.open();
 	
 };
