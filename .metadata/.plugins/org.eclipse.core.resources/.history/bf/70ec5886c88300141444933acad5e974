@@ -166,6 +166,7 @@ var getPicture = function(dataSource){
 	// Return window
 	var returnWindow = function(){
 		picWindow.close({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
+		getPicture.open();
 	};
 	
 	// Main code to return to thumbnails

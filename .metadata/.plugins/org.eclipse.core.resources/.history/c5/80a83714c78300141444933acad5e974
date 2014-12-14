@@ -139,13 +139,12 @@ var getPicture = function(dataSource){
 		borderWidth: 2
 	});
 	
-	// Photo file name
 	var picLabel = Ti.UI.createLabel({
 		text: dataSource,
 		bottom: 150,
 		color: "white",
 		font: {fontWeight: "bold", fontSize: "18"},
-		textAlign: "center"
+		textAlign: "center",
 	});
 			
 	// Close button
@@ -168,12 +167,13 @@ var getPicture = function(dataSource){
 		picWindow.close({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
 	};
 	
-	// Main code to return to thumbnails
+	// Main code to return
 	closeButton.addEventListener("click", returnWindow);
 	
 	titleBar.add(titleText);
 	picWindow.add(titleBar, picLabel, newImage, closeButton);
 	picWindow.open();
+	
 };
 
 menuButton.addEventListener("click", getGallery);
