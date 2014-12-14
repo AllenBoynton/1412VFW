@@ -35,14 +35,6 @@ var viewContainer = Ti.UI.createScrollView({
 	backgroundColor: "#fef"
 });
 
-var newImage = Ti.UI.createImageView({
-	image: images/beach.png,
-	left: 10,
-	right: 10,
-	top: 20,
-	borderRadius: 5
-});
-
 for(var i=0; i<itemCount; i++){
 	var view = Ti.UI.createView({
 		backgroundColor: "#33CCFF",
@@ -57,6 +49,6 @@ for(var i=0; i<itemCount; i++){
 	viewContainer.add(view);
 };
 
-mainWindow.add(border, newImage);
+mainWindow.add(border);
 mainWindow.add(viewContainer);
 mainWindow.open();
