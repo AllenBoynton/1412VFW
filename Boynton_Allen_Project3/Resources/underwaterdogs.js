@@ -1,47 +1,45 @@
 // Global variables
-var imagesFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
-var imageFiles = imagesFolder.getDirectoryListing();
-var galleryBar;
-
 var pWidth = Ti.Platform.displayCaps.platformWidth,
 	pHeight = Ti.Platform.displayCaps.platformHeight,
 	itemCount = 30,
 	rowCount = 4,
 	margin = 5,
-	canvasWidth = pWidth - margin * (rowCount),
-	size = canvasWidth / rowCount
+	canvasWidth = pWidth - margin * (rowCount + 1),
+	size = canvasWidth / rowCount,
+	imagesFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images2"),
+	imageFiles = imagesFolder.getDirectoryListing()
 ;
 
 // Function for new gallery window
-var getNewGallery = function(){
-	var imageWindow = Ti.UI.createWindow({
-		backgroundColor: "blue"
+var getGallery = function(){
+	var makeWindow = Ti.UI.createWindow({
+		backgroundColor: "gray"
 	});
 	
 	// Gallery bar
-	var galleryBar = Ti.UI.createView({
-		backgroundColor: "white",
+	var titleBar = Ti.UI.createView({
+		backgroundColor: "#333333",
 		top: 20,
 		height: 50
 	});
 	
-	//Gallery bar text
-	var galleryText = Ti.UI.createLabel({
-		text: "Underwater Doggies",
-		color: "gray",
-		textAlign: "center",
-		font: {fontFamily: "Chalkduster", fontSize: 16, fontWeight: "bold"}
-	});
-	
 	// Border
 	var border = Ti.UI.createView({
-		backgroundColor: "blue",
-		top: galleryBar.top + galleryBar.height,
+		backgroundColor: "#000",
+		top: titleBar.top + titleBar.height,
 		height: 2
+	});
+
+	//Gallery bar text
+	var titleText = Ti.UI.createLabel({
+		text: "Underwater Doggies",
+		color: "white",
+		textAlign: "center",
+		font: {fontFamily: "Chalkduster", fontSize: 18, fontWeight: "bold"}
 	});
 	
 	// Exit button
-	var returnButton = Ti.UI.createLabel({
+	var exitButton = Ti.UI.createLabel({
 		text: "Close Gallery",
 		backgroundColor: "gray",
 		color: "white",
@@ -51,21 +49,28 @@ var getNewGallery = function(){
 		bottom: 0,
 		textAlign: "center"
 	});
+	
+	// Border
+	var border1 = Ti.UI.createView({
+		backgroundColor: "#000",
+		bottom: 50,
+		height: 2
+	});
 
 	// Container for images
-	var viewContainer = Ti.UI.createScrollView({
-		top: galleryBar.top + galleryBar.height + border.height, 
+	var container = Ti.UI.createScrollView({
+		top: titleBar.top + titleBar.height + border.height, 
 		width: pWidth,
 		contentWidth: pWidth,
-		height: pHeight - galleryBar.top - galleryBar.height - returnButton.height,
+		height: pHeight - titleBar.top - titleBar.height - exitButton.height,
 		showVerticalScrollIndicator: true,
-		backgroundColor: "blue",
+		backgroundColor: "gray",
 		layout: "horizontal"
 	});
 
-// For loop to cycle through images in master image file
+	// For loop to cycle through images in master image file
 	for(var i=0; i<imageFiles.length; i++){
-		var view = Ti.UI.createView({
+		var thumbnail = Ti.UI.createView({
 			backgroundColor: "#33CCFF",
 			top: margin,
 			left: margin,
@@ -74,37 +79,38 @@ var getNewGallery = function(){
 			borderRadius: 5
 		});
 		
-		var newPhotos = Ti.UI.createImageView({
-			image: "images/" + imageFiles[i],
+		var newImage = Ti.UI.createImageView({
+			image: "images2/" + imageFiles[i],
 			top: 0,
-			width: view.width*2,
+			width: thumbnail.width * 2,
 			borderRadius: 5
 		});
-		view.add(newPhotos);
-		viewContainer.add(view);
+		
+		thumbnail.add(newImage);
+		container.add(thumbnail);
 		
 		// Event listener for images
-		viewContainer.addEventListener("click", function(event){
-			getPhoto(event.source.image);
+		container.addEventListener("click", function(event){
+		getPicture(event.source.image);
 		});
 		
 		// Exit window
-		var returnWindow = function(){
-			imageWindow.close();
+		var exitWindow = function(){
+			makeWindow.close();
 		};
 		
 		// Main code to return
-		returnButton.addEventListener("click", returnWindow);
+		exitButton.addEventListener("click", exitWindow);
 		
-		galleryBar.add(galleryText);
-		imageWindow.add(galleryBar, border, viewContainer, returnButton);
-		imageWindow.open();
+		titleBar.add(titleText);
+		makeWindow.add(titleBar, border, border1, container, exitButton);
+		makeWindow.open();
 	};
 };
 
 // Function to open gallery window
-var getPhoto = function(dataSource){
-	var photoWindow = Ti.UI.createWindow({
+var getPicture = function(dataSource){
+	var picWindow = Ti.UI.createWindow({
 		backgroundColor: "#595959"
 	});
 	
@@ -120,54 +126,63 @@ var getPhoto = function(dataSource){
 		text: "Pictures",
 		color: "#fff",
 		textAlign: "center",
-		font: {fontFamily: "Chalkduster", fontSize: 16, fontWeight: "bold"}
+		font: {fontFamily: "Chalkduster", fontSize: 18, fontWeight: "bold"}
 	});
 	
+	// Border
+	var border2 = Ti.UI.createView({
+		backgroundColor: "#000",
+		top: titleBar.top + titleBar.height,
+		height: 2,
+	});
+
 	// Photo view
-	var newPhoto = Ti.UI.createImageView({
+	var newImage = Ti.UI.createImageView({
 		image: dataSource,
-		top: 200,
+		top: 150,
 		left:10,
 		right: 10,
 		borderRadius: 5
 	});
 	
-	var photoLabel = Ti.UI.createLabel({
+	var picLabel = Ti.UI.createLabel({
 		text: dataSource,
-		bottom: 100,
+		bottom: 150,
 		textAlign: "center",
 	});
-	
+			
 	// Border
-	var border = Ti.UI.createView({
+	var border3 = Ti.UI.createView({
 		backgroundColor: "#000",
-		top: titleBar.top + titleBar.height,
+		bottom: 50,
 		height: 2,
 	});
-	
+
 	// Close button
-	var exitButton = Ti.UI.createLabel({
-		text: "Return To Gallery",
+	var closeButton = Ti.UI.createLabel({
+		text: "Return to Gallery",
 		backgroundColor: "gray",
-		color: "#000",
+		color: "white",
 		height: 50,
 		font: {fontFamily: "Chalkduster", fontSize: 16},
 		width: "100%",
 		bottom: 0,
 		textAlign: "center"
 	});
-	
+
 	// Close window
-	var exitWindow = function(){
-		photoWindow.close();
+	var closeWindow = function(){
+		picWindow.close();
 	};
 	
 	// Main code for photos
-	exitButton.addEventListener("click", exitWindow);
+	closeButton.addEventListener("click", closeWindow);	
+	
 	titleBar.add(titleText);
-	photoWindow.add(titleBar, border, exitButton, photoLabel, newPhoto);
-	photoWindow.open();
+	picWindow.add(titleBar, border2, border3, closeButton, picLabel, newImage);
+	picWindow.open();
+	
 };
 
-menuButton.addEventListener("click", getNewGallery);
+menuButton.addEventListener("click", getGallery);
 	
