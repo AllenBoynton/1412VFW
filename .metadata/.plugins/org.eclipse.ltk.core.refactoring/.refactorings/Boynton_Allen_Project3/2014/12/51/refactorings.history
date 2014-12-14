@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Boynton_Allen_Project3/Resources/underwater&apos; to &apos;underwater.js&apos;" description="Rename resource &apos;underwater&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resources/underwater" name="underwater.js" stamp="1418523561273" updateReferences="true"/>
+</session>
