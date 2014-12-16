@@ -83,7 +83,12 @@ var getGallery = function(){
 		
 		thumbnail.add(newImage);
 		container.add(thumbnail);
-				
+		
+		// Event listener for images
+		container.addEventListener("click", function(event){
+		getPicture(event.source.image);
+		});
+		
 		// Exit window
 		var exitWindow = function(){
 			makeWindow.close({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
@@ -96,11 +101,6 @@ var getGallery = function(){
 		makeWindow.add(titleBar, container, exitButton);
 		makeWindow.open({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
 	};
-			// Event listener for images
-		container.addEventListener("click", function(event){
-		getPicture(event.source.image);
-		});
-
 };
 
 // Function to open gallery window

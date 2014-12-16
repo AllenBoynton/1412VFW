@@ -23,10 +23,10 @@
 		</list>
 	</section>
 	<section name="SaveAsDialogSettings">
-		<item value="526" key="DIALOG_WIDTH"/>
+		<item value="527" key="DIALOG_WIDTH"/>
 		<item value="22" key="DIALOG_Y_ORIGIN"/>
 		<item value="529" key="DIALOG_HEIGHT"/>
-		<item value="189" key="DIALOG_X_ORIGIN"/>
+		<item value="206" key="DIALOG_X_ORIGIN"/>
 		<item value="1|.Helvetica Neue DeskInterface|11.0|0|COCOA|1|.HelveticaNeueDeskInterface-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="CleanDialogSettings">
