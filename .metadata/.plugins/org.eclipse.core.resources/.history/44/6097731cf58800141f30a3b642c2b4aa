@@ -3,7 +3,7 @@ Ti.UI.setBackground("transparent");
 // Background
 var mainWindow = Ti.UI.createWindow({
 	backgroundcolor: "gray",
-	title: "VFW Final Project"
+	title: "VFW Project 4 Dogs"
 });
 
 // Navigation window
