@@ -37,7 +37,7 @@ var bottomView = Ti.UI.createView({
 	top: midView.height + midView.top
 });
 
-navWindow.add(topView, midView, bottomView);
+navWindow(navWindow, topView, midView, bottomView);
 
 
 
