@@ -18,7 +18,7 @@ var flipSwitch = Ti.UI.createSwitch({
 var mainWindow = function(){
 	var favWindow = Ti.UI.createWindow({
 		title: "Favorite",
-		backgroundColor: "#ea148c"
+		backgroundColor: "pink"
 	});
 	
 	var viewFav = function(){

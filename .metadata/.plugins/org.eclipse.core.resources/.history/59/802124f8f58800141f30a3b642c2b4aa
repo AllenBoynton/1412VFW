@@ -80,7 +80,7 @@ var border2 = Ti.UI.createView({
 });
 
 var classText = Ti.UI.createLabel({
-	color: "#ea148c",
+	color: "white",
 	text: "VFW 1412 by Allen Boynton",
 	font: {fontSize: 18, fontFamily: customFont},
 	top: topView.height + topView.top + 300,

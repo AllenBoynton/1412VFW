@@ -37,7 +37,7 @@ var border = Ti.UI.createView({
 
 // Middle view in window
 var midView = Ti.UI.createView({
-	backgroundColor: "#ea148c",
+	backgroundColor: "#0d6735",
 	height: 100,
 	width: 350,
 	top: topView.height + 0, 
@@ -80,7 +80,7 @@ var border2 = Ti.UI.createView({
 });
 
 var classText = Ti.UI.createLabel({
-	color: "#ea148c",
+	color: "white",
 	text: "VFW 1412 by Allen Boynton",
 	font: {fontSize: 18, fontFamily: customFont},
 	top: topView.height + topView.top + 300,

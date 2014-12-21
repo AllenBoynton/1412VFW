@@ -34,7 +34,7 @@ var nextViewText = Ti.UI.createLabel({
 var mainWindow = function(){
 	var galleryWindow = Ti.UI.createWindow({
 		title: "Gallery",
-		backgroundColor: "#ea148c"
+		backgroundColor: "pink"
 	});
 	nextView.add(nextViewText);
 	galleryWindow.add(nextView, newImages);
