@@ -13,7 +13,7 @@ var dogView = function(){
 	while(lastDog === randomDog){
 		var randomDog = Math.floor(Math.random()*imageFiles.length);
 	};
-	newImages.image = "images1/" + imageFiles(randomDog);
+	newImages.image = "images1/" + image(randomDog);
 };
 
 // Next button to change image
@@ -44,5 +44,3 @@ var mainWindow = function(){
 nextView.add(nextViewText);
 nextView.addEventListener("click", dogView);
 topView.addEventListener("click", mainWindow);
-//midView.addEventListener("click", mainWindow);
-//bottomView.addEventListener("click", mainWindow);

@@ -163,5 +163,5 @@ var aboutWindow = function(){
 };
 
 //mainWindow.add(border, detailWindow);
-//detailWindow.add(detailBorder, dogImageView, trainingText, trainingPercent, trainingFiller, trainingView, strengthText, strengthPercent, strengthFiller, strengthView, descriptionText);
-//mainWindow.open();	
+detailWindow.add(detailBorder, dogImageView, trainingText, trainingPercent, trainingFiller, trainingView, strengthText, strengthPercent, strengthFiller, strengthView, descriptionText);
+mainWindow.open();	

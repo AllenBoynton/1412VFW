@@ -1,17 +1,19 @@
 var	imagesFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images1"),
-	imageFiles = imagesFolder.getDirectoryListing()
+	imageFiles = imagesFolder.getDirectoryListing(),
+	pWidth = Ti.Platform.displayCaps.platformWidth,
+	pHeight = Ti.Platform.displayCaps.platformHeight
 ;
 
 var newImages = Ti.UI.createImageView({
 	image: "images1/" + imageFiles[0],
-	bottom: 175
+	bottom: 200
 });
 
 var dogView = function(){
 	var lastDog = dogView;
 	var randomDog = Math.floor(Math.random()*imageFiles.length);
 	while(lastDog === randomDog){
-		var randomDog = Math.floor(Math.random()*imageFiles.length);
+		randomDog = Math.floor(Math.random()*imageFiles.length);
 	};
 	newImages.image = "images1/" + imageFiles(randomDog);
 };
@@ -19,12 +21,12 @@ var dogView = function(){
 // Next button to change image
 var nextView = Ti.UI.createView({
 	backgroundColor: "brown",
-	height: 60,
+	height: 50,
 	width: 350,
 	bottom: 0
 });
 
-var nextViewText = Ti.UI.createLabel({	
+var nextViewText = Ti.UI.createLabel({
 	color: "white",
 	text: "Next Dog Image",
 	font: {fontSize: 20, fontFamily: customFont},
@@ -34,7 +36,7 @@ var nextViewText = Ti.UI.createLabel({
 var mainWindow = function(){
 	var galleryWindow = Ti.UI.createWindow({
 		title: "Gallery",
-		backgroundColor: "#0d6735"
+		backgroundColor: "brown"
 	});
 	nextView.add(nextViewText);
 	galleryWindow.add(nextView, newImages);
@@ -44,5 +46,3 @@ var mainWindow = function(){
 nextView.add(nextViewText);
 nextView.addEventListener("click", dogView);
 topView.addEventListener("click", mainWindow);
-//midView.addEventListener("click", mainWindow);
-//bottomView.addEventListener("click", mainWindow);

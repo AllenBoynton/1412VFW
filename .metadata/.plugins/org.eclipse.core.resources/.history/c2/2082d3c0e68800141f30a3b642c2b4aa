@@ -4,35 +4,35 @@ var dogBreeds = [
 		"Training" : "65%",
 		"Strength" : "90%",
 		"Description": "The dog was bred first to bait bulls and bears. When bear-baiting and bull-baiting were deemed inhumane, rat-baiting and dog-baiting became more popular. The APBT Breed was used in both sports, and its prevalence in being put in pits with rats, or other dogs led to \"pit\" being added to its name.",
-		"image": "images/Faith.jpg"
+		"Images": "images/Faith.jpg"
 	},
 	{
 		"title"    : "Golden Retriever",
 		"Training" : "90%",
 		"Strength" : "70%",
 		"Description": "The Golden Retriever is a large-sized breed of dog bred as gun dogs to retrieve shot waterfowl such as ducks and upland game birds during hunting and shooting parties, and were named 'retriever' because of their ability to retrieve shot game undamaged.",
-		"image": "images/Bandit.jpg"
+		"Images": "images/Bandit.jpg"
 	},
 	{
 		"title"    : "Boxer",
 		"Training" : "80%",
 		"Strength" : "75%",
 		"Description": "The Boxer is a breed of stocky, medium-sized, short-haired dogs developed in Germany. Their coat is smooth and tight-fitting; colors are fawn or brindled, with or without white markings, which may cover the entire body, and white. Boxers held steady as the seventh most popular breed of dog in the United States for the fourth consecutive year.",
-		"image": "images/Duke.jpg"
+		"Images": "images/Duke.jpg"
 	},
 	{
 		"title"    : "Blue-Nose Pit bull",
 		"Training" : "65%",
 		"Strength" : "92%",
 		"Description": "Blue nose pits are very fascinating to a lot of people because this is a color that cannot be found in many dog breeds. The only thing different about a blue nose is coloring. That’s not to say that all pit bulls are the same, but any differences between them have nothing to do with the coloring of the dog.",
-		"image": "images/Kennah.jpeg"
+		"Images": "images/Kennah.jpeg"
 	},
 	{
 		"title"    : "Miniature Pinscher",
 		"Training" : "70%",
 		"Strength" : "45%",
 		"Description": "The Miniature Pinscher (Zwergpinscher, Min Pin) is a small breed of dog, originating from Germany. The breed's earliest ancestors may have included the German Pinscher mixed with Italian greyhounds and dachshunds. The Miniature Pinscher is reported to include the Dachshund and Italian Greyhound among its ancestors. Many historians agree the shorthaired German Pinscher to the family tree.",
-		"image": "images/Diego.jpg"
+		"Images": "images/Diego.jpg"
 	}		
 ];
 
@@ -162,6 +162,6 @@ var aboutWindow = function(){
 	};
 };
 
-//mainWindow.add(border, detailWindow);
-//detailWindow.add(detailBorder, dogImageView, trainingText, trainingPercent, trainingFiller, trainingView, strengthText, strengthPercent, strengthFiller, strengthView, descriptionText);
-//mainWindow.open();	
+mainWindow.add(border, dogsSection, detailWindow);
+detailWindow.add(detailBorder, dogImageView, trainingText, trainingPercent, trainingFiller, trainingView, strengthText, strengthPercent, strengthFiller, strengthView, descriptionText);
+mainWindow.open();	

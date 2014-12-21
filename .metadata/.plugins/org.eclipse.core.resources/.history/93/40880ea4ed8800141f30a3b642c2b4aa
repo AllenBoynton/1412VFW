@@ -1,4 +1,4 @@
-Ti.UI.setBackground("transparent");
+Ti.UI.setBackground("gray");
 
 // Background
 var mainWindow = Ti.UI.createWindow({
@@ -62,13 +62,13 @@ var bottomView = Ti.UI.createView({
 	backgroundColor: "blue",
 	height: 100,
 	width: 350, 
-	top: topView.height + midView.height + 0,
+	bottom: topView.height + midView.height + 0,
 	
 });
 
 var bottomViewText = Ti.UI.createLabel({
 	color: "white",
-	text: "Favorite",
+	text: "Activities",
 	font: {fontSize: 40, fontFamily: customFont},
 	textAlign: "center"
 });
@@ -76,7 +76,7 @@ var bottomViewText = Ti.UI.createLabel({
 var border2 = Ti.UI.createView({
 	backgroundColor: "black",
 	height: 2,
-	top: 302
+	top: 300
 });
 
 var classText = Ti.UI.createLabel({
@@ -89,7 +89,7 @@ var classText = Ti.UI.createLabel({
 
 var loadFile = require("gallery");
 var loadFile = require("about");
-var loadFile = require("favorite");
+var loadFile = require("activities");
 
 mainWindow.add(topView, midView, bottomView, classText, border, border1, border2);
 topView.add(topViewText);
