@@ -1,0 +1,101 @@
+var dogBreeds = [
+	{
+		"title"    : "Female Pit bull",
+		"Training" : "65",
+		"Strength" : "90",
+		"Description": "A",
+		"Images": "images/Faith.jpg"
+	},
+	{
+		"title"    : "Golden Retriever",
+		"Training" : "90",
+		"Strength" : "70",
+		"Description": "A",
+		"Images": "images/Bandit.jpg"
+	},
+	{
+		"title"    : "Boxer",
+		"Training" : "80",
+		"Strength" : "75",
+		"Description": "A",
+		"Images": "images/Duke.jpg"
+	},
+	{
+		"title"    : "Blue-Nose Pit bull",
+		"Training" : "65",
+		"Strength" : "92",
+		"Description": "A",
+		"Images": "images/Kennah.jpeg"
+	},
+	{
+		"title"    : "Minature Pinscher",
+		"Training" : "70",
+		"Strength" : "45",
+		"Description": "A",
+		"Images": "images/Diego.jpg"
+	}		
+];
+
+var aboutWindow = function(){
+	var mainWindow = Ti.UI.createWindow({
+		title: "Popular Dog Breeds",
+		backgroundColor: "black"
+	});
+	
+	var border = Ti.UI.createView({
+		backgroundColor: "black",
+		height: 2
+	});
+	
+	var dogs = Ti.UI.createTableView({
+	});
+	
+	if(Ti.Platform.name === "iPhone OS"){
+		dogs.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
+	};
+	
+	var dogsSection = Ti.UI.createTableViewSection({
+		headerTitle: "These are some top dog breeds in popularity with many people today."
+	});
+	
+	var getDetail = function(){
+		var detailWindow = Ti.UI.createWindow({
+			title: this.title,
+			backgroundColor: "brown"
+		});
+		
+		var detailBorder = Ti.UI.createView({
+			backgroundColor: "black",
+			height: 2,
+			top: 0
+		});
+		
+		var dogImageView = Ti.UI.createImageView({
+			image: this.imageView,
+			top: 20,
+			borderRadius: 8,
+			imageAlign: "center",
+			width: 300
+		});
+		
+		// Start training meter
+		var trainingText = Ti.UI.createLabel({
+			text: "Training Ability",
+			color: "white",
+			font: {fontSize: 16, fontFamily: customFont},
+			bottom: 250,
+			left: 20
+		});
+		
+		var trainingPercent = Ti.UI.createLabel({
+			text: this.Training,
+			color: "white",
+			font: {fontSize: 16, fontFamily: customFont},
+			bottom: 250,
+			right: 20
+		});
+		
+		
+	};
+};
+
