@@ -55,3 +55,5 @@ var mainWindow = function(){
 nextView.add(nextViewText);
 nextView.addEventListener("click", dogView);
 topView.addEventListener("click", mainWindow);
+//midView.addEventListener("click", mainWindow);
+//bottomView.addEventListener("click", mainWindow);

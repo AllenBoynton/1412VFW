@@ -164,5 +164,4 @@ var aboutWindow = function(){
 		mainWindow.openWindow(aboutWindow);
 	};
 };
-
-midView.addEventListener("click", detailWindow);
+midView.addEventListener("click", aboutWindow);

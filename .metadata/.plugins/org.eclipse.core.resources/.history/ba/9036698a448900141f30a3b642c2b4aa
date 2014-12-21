@@ -159,10 +159,5 @@ var aboutWindow = function(){
 			right: 15,
 			bottom: 10
 		});
-		dogImageView.add(trainingView, trainingText, trainingPercent, trainingFiller, strengthView, strengthText, strengthPercent, strengthFiller);
-		detailWindow.add(dogImageView, trainingView, strengthView, descriptionText);
-		mainWindow.openWindow(aboutWindow);
 	};
 };
-
-midView.addEventListener("click", detailWindow);

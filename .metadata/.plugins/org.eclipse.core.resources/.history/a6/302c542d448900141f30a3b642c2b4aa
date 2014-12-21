@@ -3,6 +3,8 @@
 // VFW1412
 // Final Project
 
+Ti.UI.setBackground("black");
+
 // Background
 var mainWindow = Ti.UI.createWindow({
 	backgroundcolor: "gray",

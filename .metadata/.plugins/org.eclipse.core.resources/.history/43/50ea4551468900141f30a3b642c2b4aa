@@ -10,7 +10,7 @@ var mainWindow = Ti.UI.createWindow({
 });
 
 // Navigation window
-var navWindow = Ti.UI.iOS.createNavigationWindow({
+var newWindow = Ti.UI.iOS.createNavigationWindow({
 	window: mainWindow
 });
 
@@ -98,4 +98,4 @@ mainWindow.add(topView, midView, bottomView, classText, border1, border2, border
 topView.add(topViewText);
 midView.add(midViewText);
 bottomView.add(bottomViewText);
-navWindow.open();
+newWindow.open();

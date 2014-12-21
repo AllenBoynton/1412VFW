@@ -2,7 +2,7 @@ var	imagesFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "imag
 	imageFiles = imagesFolder.getDirectoryListing()
 ;
 
-var dogImages = Ti.UI.createImageView({
+var newImages = Ti.UI.createImageView({
 	image: "images1/" + imageFiles[0],
 	bottom: 175
 });
@@ -13,7 +13,7 @@ var dogView = function(){
 	while(lastDog === randomDog){
 		var randomDog = Math.floor(Math.random()*imageFiles.length);
 	};
-	dogImages.image = "images1/" + imageFiles(randomDog);
+	newImages.image = "images1/" + imageFiles(randomDog);
 };
 
 // Next button to change image
@@ -29,7 +29,7 @@ var nextView = Ti.UI.createView({
 });
 
 var nextViewText = Ti.UI.createLabel({	
-	color: "white",
+	color: "black",
 	text: "New Image",
 	font: {fontSize: 20, fontFamily: customFont},
 	textAlign: "center"
@@ -48,10 +48,12 @@ var mainWindow = function(){
 		width: 350
 	});
 	nextView.add(nextViewText);
-	galleryWindow.add(nextView, dogImages, border);
-	navWindow.openWindow(galleryWindow);
+	galleryWindow.add(nextView, newImages, border);
+	newWindow.openWindow(galleryWindow);
 };
 
 nextView.add(nextViewText);
-nextView.addEventListener("click", dogView);
+nextView.addEventListener("click", newImages);
 topView.addEventListener("click", mainWindow);
+//midView.addEventListener("click", mainWindow);
+//bottomView.addEventListener("click", mainWindow);

@@ -36,8 +36,8 @@ var dogBreeds = [
 	}		
 ];
 
-var aboutWindow = function(){
-	var mainWindow = Ti.UI.createWindow({
+var mainWindow = function(){
+	var aboutWindow = Ti.UI.createWindow({
 		title: "Popular Dog Breeds",
 		backgroundColor: "gray"
 	});
@@ -159,10 +159,6 @@ var aboutWindow = function(){
 			right: 15,
 			bottom: 10
 		});
-		dogImageView.add(trainingView, trainingText, trainingPercent, trainingFiller, strengthView, strengthText, strengthPercent, strengthFiller);
-		detailWindow.add(dogImageView, trainingView, strengthView, descriptionText);
 		mainWindow.openWindow(aboutWindow);
 	};
 };
-
-midView.addEventListener("click", detailWindow);
