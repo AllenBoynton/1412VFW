@@ -8,8 +8,10 @@ var mainWindow = Ti.UI.createWindow({
 
 // Navigation window
 var navWindow = Ti.UI.iOS.createNavigationWindow({
-	window: mainwindow
+	window: mainWindow
 });
+
+var customFont = "MarkerFelt-Wide";
 
 // Top view in window
 var topView = Ti.UI.createView({
@@ -34,5 +36,10 @@ var bottomView = Ti.UI.createView({
 	width: 350,
 	top: midView.height + midView.top
 });
+
+navWindow(navWindow, topView, midView, bottomView);
+
+
+
 
 
