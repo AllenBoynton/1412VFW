@@ -67,11 +67,11 @@ var classText = Ti.UI.createLabel({
 	top: topView.height + topView.top + 300,
 	textAlign: "center"
 });
-
+/*
 var loadFile = require("jSon");
-var loadFile = require("images");
-//var loadFile = require("about");
-
+var loadFile = require("gallery");
+var loadFile = require("about");
+*/
 mainWindow.add(topView, midView, bottomView, classText);
 topView.add(topViewText);
 midView.add(midViewText);

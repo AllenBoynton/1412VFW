@@ -1,8 +1,8 @@
-var imageList = Ti.Filesystem.getFile(Ti.Filesystem.resoursesDirectory, "images1");
+var imageList = Ti.Filesystem.getFile(Ti.Filesystem.resoursesDirectory, "images");
 var galleryImages = imagesFolder.getDirectoryListing();
 
 var dogImages = Ti.UI.createImageView({
-	image: "images1/" = galleryImages[0],
+	image: "images/" = galleryImages[0],
 	bottom: 200
 });
 
@@ -12,7 +12,7 @@ var dogView = function(){
 	while(lastDog === randomDog){
 		randomDog = Math.floor(Math.random()*galleryImages.length);
 	};
-	dogImages.image = "images1/" + galleryImages(randomDog);
+	dogImages.image = "images/" + galleryImages(randomDog);
 };
 
 // Next button to change image

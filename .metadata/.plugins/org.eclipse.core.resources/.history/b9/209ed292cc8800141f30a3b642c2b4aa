@@ -68,7 +68,7 @@ var classText = Ti.UI.createLabel({
 	textAlign: "center"
 });
 
-var loadFile = require("jSon");
+//var loadFile = require("jSon");
 var loadFile = require("images");
 //var loadFile = require("about");
 
