@@ -34,7 +34,7 @@ var midView = Ti.UI.createView({
 	backgroundColor: "white",
 	height: 100,
 	width: 350,
-	top: topView.height + 0, 
+	top: topView.height + topView.top, 
 });
 
 // Middle button text
@@ -48,9 +48,9 @@ var midViewText = Ti.UI.createLabel({
 // Lower view in window
 var bottomView = Ti.UI.createView({
 	backgroundColor: "black",
-	height: 100, 
+	height: 100,
 	width: 350,
-	top: topView.height + midView.height + 0
+	top: midView.height + midView.top + 100
 });
 
 var bottomViewText = Ti.UI.createLabel({

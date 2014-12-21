@@ -1,8 +1,8 @@
-Ti.UI.setBackground("gray");
+Ti.UI.setBackground("#333");
 
 // Background
 var mainWindow = Ti.UI.createWindow({
-	backgroundcolor: "gray",
+	backgroundcolor: "#3b3c3a",
 	title: "VFW Project 4 Dogs"
 });
 
@@ -15,7 +15,7 @@ var customFont = "MarkerFelt-Wide";
 
 // Top view in window
 var topView = Ti.UI.createView({
-	backgroundColor: "#brown",
+	backgroundColor: "#blue",
 	height: 100,
 	width: 350,
 	top: 0
@@ -24,38 +24,39 @@ var topView = Ti.UI.createView({
 // Top button text
 var topViewText = Ti.UI.createLabel({
 	text: "Gallery",
-	color: "white",
+	backgroundColor: "#344d59",
+	color: "#fff",
 	font: {fontSize: 40, fontFamily: customFont},
 	textAlign: "center"
 });
 
 // Middle view in window
 var midView = Ti.UI.createView({
-	backgroundColor: "white",
+	backgroundColor: "red",
 	height: 100,
 	width: 350,
-	top: topView.height + 0, 
+	top: topView.height + topView.top, 
 });
 
 // Middle button text
 var midViewText = Ti.UI.createLabel({
-	color: "black",
+	color: "white",
 	text: "About",
 	font: {fontSize: 40, fontFamily: customFont},
 	textAlign: "center"	
 });
 
 // Lower view in window
-var bottomView = Ti.UI.createView({
-	backgroundColor: "black",
-	height: 100, 
+var bottomView = Ti.UI.createWindow({
+	backgroundColor: "#2d6c79",
+	height: 100,
 	width: 350,
-	top: topView.height + midView.height + 0
+	top: midView.height + midView.top
 });
 
 var bottomViewText = Ti.UI.createLabel({
-	color: "white",
-	text: "Activities",
+	color: "red",
+	text: "?",
 	font: {fontSize: 40, fontFamily: customFont},
 	textAlign: "center"
 });

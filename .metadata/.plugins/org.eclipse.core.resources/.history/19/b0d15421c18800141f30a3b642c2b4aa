@@ -1,4 +1,4 @@
-Ti.UI.setBackground("gray");
+Ti.UI.setBackground("#333");
 
 // Background
 var mainWindow = Ti.UI.createWindow({
@@ -15,7 +15,7 @@ var customFont = "MarkerFelt-Wide";
 
 // Top view in window
 var topView = Ti.UI.createView({
-	backgroundColor: "#brown",
+	backgroundColor: "#blue",
 	height: 100,
 	width: 350,
 	top: 0
@@ -31,15 +31,15 @@ var topViewText = Ti.UI.createLabel({
 
 // Middle view in window
 var midView = Ti.UI.createView({
-	backgroundColor: "white",
+	backgroundColor: "black",
 	height: 100,
 	width: 350,
-	top: topView.height + 0, 
+	top: topView.height + topView.top, 
 });
 
 // Middle button text
 var midViewText = Ti.UI.createLabel({
-	color: "black",
+	color: "white",
 	text: "About",
 	font: {fontSize: 40, fontFamily: customFont},
 	textAlign: "center"	
@@ -47,10 +47,10 @@ var midViewText = Ti.UI.createLabel({
 
 // Lower view in window
 var bottomView = Ti.UI.createView({
-	backgroundColor: "black",
-	height: 100, 
+	backgroundColor: "tan",
+	height: 100,
 	width: 350,
-	top: topView.height + midView.height + 0
+	top: midView.height + midView.top
 });
 
 var bottomViewText = Ti.UI.createLabel({

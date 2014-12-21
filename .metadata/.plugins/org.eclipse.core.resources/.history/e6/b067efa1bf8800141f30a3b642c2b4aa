@@ -1,0 +1,9 @@
+Ti.UI.setBackground("#333");
+
+// Background
+var mainWindow = Ti.UI.createWindow({
+	backgroundcolor: "#3b3c3a",
+	title: "VFW Project 4 Dogs"
+});
+
+var loadFiles = require("jSon");
