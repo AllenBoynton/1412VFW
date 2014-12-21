@@ -26,7 +26,7 @@ var nextView = Ti.UI.createView({
 
 var nextViewText = Ti.UI.createLabel({	
 	color: "white",
-	text: "New Image",
+	text: "Next Dog Image",
 	font: {fontSize: 20, fontFamily: customFont},
 	textAlign: "center"
 });
@@ -34,7 +34,7 @@ var nextViewText = Ti.UI.createLabel({
 var mainWindow = function(){
 	var galleryWindow = Ti.UI.createWindow({
 		title: "Gallery",
-		backgroundColor: "pink"
+		backgroundColor: "#0d6735"
 	});
 	nextView.add(nextViewText);
 	galleryWindow.add(nextView, newImages);
