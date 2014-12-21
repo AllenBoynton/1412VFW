@@ -19,17 +19,17 @@ var dogView = function(){
 // Next button to change image
 var nextView = Ti.UI.createView({
 	backgroundColor: "gray",
-	left: 30,
-	right: 30,
+	left: 20,
+	right: 20,
 	borderColor: "black",
 	borderRadius: 10,
 	borderWidth: 2,
 	height: 60,
-	bottom: 30
+	bottom: 15
 });
 
 var nextViewText = Ti.UI.createLabel({	
-	color: "black",
+	color: "white",
 	text: "New Image",
 	font: {fontSize: 20, fontFamily: customFont},
 	textAlign: "center"

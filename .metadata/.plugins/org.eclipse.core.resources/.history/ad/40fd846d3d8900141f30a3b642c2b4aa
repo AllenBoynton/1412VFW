@@ -34,10 +34,10 @@ var topViewText = Ti.UI.createLabel({
 	textAlign: "center"
 });
 
-var border1 = Ti.UI.createView({
+var border = Ti.UI.createView({
 	backgroundColor: "black",
 	height: 2,
-	top: 0
+	top: 100
 });
 
 // Middle view in window
@@ -56,10 +56,10 @@ var midViewText = Ti.UI.createLabel({
 	textAlign: "center"	
 });
 
-var border2 = Ti.UI.createView({
+var border1 = Ti.UI.createView({
 	backgroundColor: "black",
 	height: 2,
-	top: 100
+	top: 200
 });
 
 // Lower view in window
@@ -78,10 +78,10 @@ var bottomViewText = Ti.UI.createLabel({
 	textAlign: "center"
 });
 
-var border3 = Ti.UI.createView({
+var border2 = Ti.UI.createView({
 	backgroundColor: "black",
 	height: 2,
-	top: 200
+	top: 302
 });
 
 var classText = Ti.UI.createLabel({
@@ -96,7 +96,7 @@ var loadFile = require("gallery");
 var loadFile = require("about");
 var loadFile = require("favorite");
 
-mainWindow.add(topView, midView, bottomView, classText, border1, border2, border3);
+mainWindow.add(topView, midView, bottomView, classText, border, border1, border2);
 topView.add(topViewText);
 midView.add(midViewText);
 bottomView.add(bottomViewText);

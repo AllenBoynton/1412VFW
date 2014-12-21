@@ -21,7 +21,7 @@ var customFont = "MarkerFelt-Wide";
 // Top view in window
 var topView = Ti.UI.createView({
 	backgroundColor: "brown",
-	height: 100,
+	height: 98,
 	width: 350,
 	top: 0
 });

@@ -18,18 +18,20 @@ var dogView = function(){
 
 // Next button to change image
 var nextView = Ti.UI.createView({
-	backgroundColor: "gray",
-	left: 30,
-	right: 30,
+	backgroundColor: "brown",
+	left: 10,
+	right: 10,
 	borderColor: "black",
 	borderRadius: 10,
 	borderWidth: 2,
 	height: 60,
-	bottom: 30
+	bottom: 5
 });
 
+var border = Ti.UI.createView({});
+
 var nextViewText = Ti.UI.createLabel({	
-	color: "black",
+	color: "white",
 	text: "New Image",
 	font: {fontSize: 20, fontFamily: customFont},
 	textAlign: "center"
@@ -44,8 +46,7 @@ var mainWindow = function(){
 	var border = Ti.UI.createView({
 		borderColor: "black",
 		borderWidth: 2,
-		top: 0,
-		width: 350
+		top: galleryWindow.height + galleryWindow.width
 	});
 	nextView.add(nextViewText);
 	galleryWindow.add(nextView, newImages, border);
