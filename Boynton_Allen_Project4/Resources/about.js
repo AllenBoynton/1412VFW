@@ -1,40 +1,40 @@
-var dogBreeds = [
+var dogBreeds = {
 	{
-		"title"    : "Female Pit bull",
-		"training" : "65%",
-		"strength" : "90%",
-		"description": "The dog was bred first to bait bulls and bears. When bear-baiting and bull-baiting were deemed inhumane, rat-baiting and dog-baiting became more popular. The APBT Breed was used in both sports, and its prevalence in being put in pits with rats, or other dogs led to \"pit\" being added to its name.",
-		"image": "images/Faith.jpg"
+	title    : "Female Pit bull",
+	training : "65%",
+	strength : "90%",
+	description: "The dog was bred first to bait bulls and bears. When bear-baiting and bull-baiting were deemed inhumane, rat-baiting and dog-baiting became more popular. The APBT Breed was used in both sports, and its prevalence in being put in pits with rats, or other dogs led to \"pit\" being added to its name.",
+	image: "images/Faith.jpg"
 	},
 	{
-		"title"    : "Golden Retriever",
-		"training" : "90%",
-		"strength" : "70%",
-		"description": "The Golden Retriever is a large-sized breed of dog bred as gun dogs to retrieve shot waterfowl such as ducks and upland game birds during hunting and shooting parties, and were named 'retriever' because of their ability to retrieve shot game undamaged.",
-		"image": "images/Bandit.jpg"
+	title    : "Golden Retriever",
+	training : "90%",
+	strength : "70%",
+	description: "The Golden Retriever is a large-sized breed of dog bred as gun dogs to retrieve shot waterfowl such as ducks and upland game birds during hunting and shooting parties, and were named 'retriever' because of their ability to retrieve shot game undamaged.",
+	image: "images/Bandit.jpg"
 	},
 	{
-		"title"    : "Boxer",
-		"training" : "80%",
-		"strength" : "75%",
-		"description": "The Boxer is a breed of stocky, medium-sized, short-haired dogs developed in Germany. Their coat is smooth and tight-fitting; colors are fawn or brindled, with or without white markings, which may cover the entire body, and white. Boxers held steady as the seventh most popular breed of dog in the United States for the fourth consecutive year.",
-		"image": "images/Duke.jpg"
+	title    : "Boxer",
+	training : "80%",
+	strength : "75%",
+	description: "The Boxer is a breed of stocky, medium-sized, short-haired dogs developed in Germany. Their coat is smooth and tight-fitting; colors are fawn or brindled, with or without white markings, which may cover the entire body, and white. Boxers held steady as the seventh most popular breed of dog in the United States for the fourth consecutive year.",
+	image: "images/Duke.jpg"
 	},
 	{
-		"title"    : "Blue-Nose Pit bull",
-		"training" : "65%",
-		"strength" : "92%",
-		"description": "Blue nose pits are very fascinating to a lot of people because this is a color that cannot be found in many dog breeds. The only thing different about a blue nose is coloring. That’s not to say that all pit bulls are the same, but any differences between them have nothing to do with the coloring of the dog.",
-		"image": "images/Kennah.jpeg"
+	title    : "Blue-Nose Pit bull",
+	training : "65%",
+	strength : "92%",
+	description: "Blue nose pits are very fascinating to a lot of people because this is a color that cannot be found in many dog breeds. The only thing different about a blue nose is coloring. That’s not to say that all pit bulls are the same, but any differences between them have nothing to do with the coloring of the dog.",
+	image: "images/Kennah.jpeg"
 	},
 	{
-		"title"    : "Miniature Pinscher",
-		"training" : "70%",
-		"strength" : "45%",
-		"description": "The Miniature Pinscher (Zwergpinscher, Min Pin) is a small breed of dog, originating from Germany. The breed's earliest ancestors may have included the German Pinscher mixed with Italian greyhounds and dachshunds. The Miniature Pinscher is reported to include the Dachshund and Italian Greyhound among its ancestors. Many historians agree the shorthaired German Pinscher to the family tree.",
-		"image": "images/Diego.jpg"
+	title    : "Miniature Pinscher",
+	training : "70%",
+	strength : "45%",
+	description: "The Miniature Pinscher (Zwergpinscher, Min Pin) is a small breed of dog, originating from Germany. The breed's earliest ancestors may have included the German Pinscher mixed with Italian greyhounds and dachshunds. The Miniature Pinscher is reported to include the Dachshund and Italian Greyhound among its ancestors. Many historians agree the shorthaired German Pinscher to the family tree.",
+	image: "images/Diego.jpg"
 	}		
-];
+};
 
 var aboutWindow = function(){
 	var mainWindow = Ti.UI.createWindow({
@@ -161,6 +161,7 @@ var aboutWindow = function(){
 		});
 		dogImageView.add(trainingView, trainingText, trainingPercent, trainingFiller, strengthView, strengthText, strengthPercent, strengthFiller);
 		detailWindow.add(dogImageView, trainingView, strengthView, descriptionText);
+		
 		mainWindow.openWindow(aboutWindow);
 	};
 };
