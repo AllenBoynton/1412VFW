@@ -1,0 +1,10 @@
+version: "Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)"
+options: "62d0a73f644eb246653dd9a5aa577fd6"
+build_time: [500187895, 318334000]
+inputs:
+  "/Users/aboynton/Full Sail/Current Class/Mobile Development Frameworks I/Week 2/Assignments/boynton_allen_project2/boynton_allen_project2/ArrayInfo.swift": [497675626, 0]
+  "/Users/aboynton/Full Sail/Current Class/Mobile Development Frameworks I/Week 2/Assignments/boynton_allen_project2/boynton_allen_project2/ArticleTableView.swift": [497675626, 0]
+  "/Users/aboynton/Full Sail/Current Class/Mobile Development Frameworks I/Week 2/Assignments/boynton_allen_project2/boynton_allen_project2/AppDelegate.swift": [497567440, 0]
+  "/Users/aboynton/Full Sail/Current Class/Mobile Development Frameworks I/Week 2/Assignments/boynton_allen_project2/boynton_allen_project2/ViewController.swift": [497675626, 0]
+  "/Users/aboynton/Full Sail/Current Class/Mobile Development Frameworks I/Week 2/Assignments/boynton_allen_project2/boynton_allen_project2/DetailViewController.swift": [497676155, 0]
+  "/Users/aboynton/Full Sail/Current Class/Mobile Development Frameworks I/Week 2/Assignments/boynton_allen_project2/boynton_allen_project2/VideoViewController.swift": [497678290, 0]

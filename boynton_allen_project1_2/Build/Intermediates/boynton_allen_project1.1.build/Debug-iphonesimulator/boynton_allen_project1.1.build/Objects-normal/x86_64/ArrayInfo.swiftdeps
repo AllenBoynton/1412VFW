@@ -1,0 +1,35 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ArrayInfo"
+provides-nominal:
+- "C24boynton_allen_project1_19ArrayInfo"
+provides-member:
+- ["C24boynton_allen_project1_19ArrayInfo", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "ArrayInfo"
+- "StringLiteralType"
+- "String"
+depends-member:
+- ["PSs9AnyObject", ""]
+- ["C24boynton_allen_project1_19ArrayInfo", "String"]
+- ["C24boynton_allen_project1_19ArrayInfo", "deinit"]
+- ["C24boynton_allen_project1_19ArrayInfo", "detail"]
+- ["C24boynton_allen_project1_19ArrayInfo", "image"]
+- ["C24boynton_allen_project1_19ArrayInfo", "init"]
+- ["C24boynton_allen_project1_19ArrayInfo", "subtitle"]
+- ["C24boynton_allen_project1_19ArrayInfo", "title"]
+depends-nominal:
+- "PSs9AnyObject"
+- "C24boynton_allen_project1_19ArrayInfo"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+interface-hash: "7f808434cbc96e66e1800733d0ccc5bf"

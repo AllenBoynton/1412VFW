@@ -1,0 +1,9 @@
+version: "Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)"
+options: "6ec996562b457ff29b11dd13d3ee1dcc"
+build_time: [499736868, 542351000]
+inputs:
+  "/Users/aboynton/Desktop/MDF_1511/Week1/Project1/boynton_allen_project1.1/boynton_allen_project1.1/ObjectViewCell.swift": [499398238, 0]
+  "/Users/aboynton/Desktop/MDF_1511/Week1/Project1/boynton_allen_project1.1/boynton_allen_project1.1/ViewController.swift": [499408443, 0]
+  "/Users/aboynton/Desktop/MDF_1511/Week1/Project1/boynton_allen_project1.1/boynton_allen_project1.1/AppDelegate.swift": [499736744, 0]
+  "/Users/aboynton/Desktop/MDF_1511/Week1/Project1/boynton_allen_project1.1/boynton_allen_project1.1/DetailViewController.swift": [9223372036854775807, 0]
+  "/Users/aboynton/Desktop/MDF_1511/Week1/Project1/boynton_allen_project1.1/boynton_allen_project1.1/ArrayInfo.swift": [499318296, 0]

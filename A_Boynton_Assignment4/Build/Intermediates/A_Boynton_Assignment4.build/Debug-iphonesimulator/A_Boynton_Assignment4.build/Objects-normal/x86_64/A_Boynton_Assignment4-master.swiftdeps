@@ -1,0 +1,8 @@
+version: "Apple Swift version 2.0 (swiftlang-700.0.59 clang-700.0.72)"
+options: "7fa47b93bef5b1578d2e1e35758de249"
+build_time: [497666740, 894830000]
+inputs: 
+	"/Users/aboynton/Full Sail/Completed Classes/Apple Programming OC 1509/APL1509_Repos/A_Boynton_Assignment4/A_Boynton_Assignment4/AppDelegate.swift": [496458407, 0]
+	"/Users/aboynton/Full Sail/Completed Classes/Apple Programming OC 1509/APL1509_Repos/A_Boynton_Assignment4/A_Boynton_Assignment4/VacationViewController.swift": [496472367, 0]
+	"/Users/aboynton/Full Sail/Completed Classes/Apple Programming OC 1509/APL1509_Repos/A_Boynton_Assignment4/A_Boynton_Assignment4/AnimalViewController.swift": [496472367, 0]
+	"/Users/aboynton/Full Sail/Completed Classes/Apple Programming OC 1509/APL1509_Repos/A_Boynton_Assignment4/A_Boynton_Assignment4/ViewController.swift": [496476243, 0]
